@@ -1,0 +1,13 @@
+{
+  "name": "savvyparrot-adventure-04",
+  "version": "0.0.1",
+  "description": "Adventure #4 on Pepi's Island.",
+  "homepage": "http://www.savvyparrot.com",
+  "author": {
+    "name": "Pepi McClure",
+    "company": "SavvyParrot"
+  },
+  "dependencies": {
+    "lineman": "~0.11.6"
+  }
+}
