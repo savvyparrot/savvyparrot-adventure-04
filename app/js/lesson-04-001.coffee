@@ -3,12 +3,10 @@
   root[targetNS][localName] = (mode, startPosition, doLoop) ->
     @initialize(mode, startPosition, doLoop, {})
 
+    TIME_PEPI_ENTRANCE = 16
+    TIME_PEPI_ON_STAGE = TIME_PEPI_ENTRANCE + 31
+
     translate = (target, startTime, startPoint, endTime, endPoint) ->
-      # x and y given by startPoint
-      # scaleX and scaleY = 1
-      # rotation = 0
-      # skewX and skewY = 0
-      # regX and regY = 0
       target.setTransform(startPoint.x, startPoint.y, 1, 1, 0, 0, 0, 0, 0)
       target._off = false
       tween = cj.Tween.get(target)
@@ -27,9 +25,6 @@
     welcomeSound = () ->
       cj.Sound.play('sound-pepi', cj.Sound.INTERRUPT_EARLY, 0, 0, undefined)
       return
-
-    TIME_PEPI_ENTRANCE = 16
-    TIME_PEPI_ON_STAGE = TIME_PEPI_ENTRANCE + 31
 
     pepi = new sp.Pepi()
     @timeline.addTween translate pepi, TIME_PEPI_ENTRANCE, new cj.Point(-450, -100), TIME_PEPI_ON_STAGE, new cj.Point(-110, 110)
