@@ -39,7 +39,7 @@
     farmArrival = (farm) ->
       farm._off = true
       farm.alpha = 0
-      tween = cj.Tween.get(farm)
+      tween = cj.Tween.get farm
       tween.wait TIME_BEGIN_SWAP_ISLAND_TO_FARM
       tween.to _off: false
       tween.to alpha:1, DURATION_SWAP_ISLAND_TO_FARM
@@ -77,11 +77,10 @@
 
     # Objects which appear first are drawn on top.
     # Can we make it more linear and change the z-order?
-#    @timeline.addTween pepiEntrance(pepi)
     @timeline.addTween pepiEntrance pepi, new cj.Point(-450, -100), new cj.Point(-110, 110)
 
     @timeline.addTween showBubble "Hello Kids!\nWelcome to my island!"
-    @timeline.addTween playBubble @, 'sound-pepi'
+#   @timeline.addTween playBubble @, 'sound-pepi'
 
     @timeline.addTween farmArrival farm
 
