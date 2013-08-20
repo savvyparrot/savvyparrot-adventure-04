@@ -80,7 +80,7 @@
     @timeline.addTween pepiEntrance pepi, new cj.Point(-450, -100), new cj.Point(-110, 110)
 
     @timeline.addTween showBubble "Hello Kids!\nWelcome to my island!"
-#   @timeline.addTween playBubble @, 'sound-pepi'
+    @timeline.addTween playBubble @, 'sound-pepi'
 
     @timeline.addTween farmArrival farm
 
@@ -92,4 +92,4 @@
   root[targetNS][localName].prototype.nominalBounds = new cj.Rectangle(0, 0, 1024, 768)
   return
 
-)(this, "SavvyParrot", "Adventure04Lesson004", SavvyParrot, createjs)
+)(this, "SavvyParrot", "ExampleMovieClip", SavvyParrot, createjs)
